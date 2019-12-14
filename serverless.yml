@@ -41,7 +41,7 @@ functions:
   # - cors: enabled CORS (Cross-Origin Resource Sharing) for browser cross domain api call
   # - authorizer: authenticate using the AWS IAM role
   create:
-    handler: create.main
+    handler: api/create.main
     events:
       - http:
           path: notes
@@ -53,7 +53,7 @@ functions:
     # Defines an HTTP API endpoint that calls the main function in get.js
     # - path: url path is /notes/{id}
     # - method: GET request
-    handler: get.main
+    handler: api/get.main
     events:
       - http:
           path: notes/{id}
@@ -65,7 +65,7 @@ functions:
     # Defines an HTTP API endpoint that calls the main function in list.js
     # - path: url path is /notes
     # - method: GET request
-    handler: list.main
+    handler: api/list.main
     events:
       - http:
           path: notes
@@ -77,7 +77,7 @@ functions:
     # Defines an HTTP API endpoint that calls the main function in update.js
     # - path: url path is /notes/{id}
     # - method: PUT request
-    handler: update.main
+    handler: api/update.main
     events:
       - http:
           path: notes/{id}
@@ -89,7 +89,7 @@ functions:
     # Defines an HTTP API endpoint that calls the main function in delete.js
     # - path: url path is /notes/{id}
     # - method: DELETE request
-    handler: delete.main
+    handler: api/delete.main
     events:
       - http:
           path: notes/{id}
@@ -101,7 +101,7 @@ functions:
     # Defines an HTTP API endpoint that calls the main function in billing.js
     # - path: url path is /billing
     # - method: POST request
-    handler: billing.main
+    handler: api/billing.main
     events:
       - http:
           path: billing
